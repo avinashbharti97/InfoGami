@@ -1,10 +1,16 @@
-#!/home/hiro/Desktop/Desktop/abuzillav0.1/env/bin/python2
-# EASY-INSTALL-ENTRY-SCRIPT: 'python-slugify==1.2.0','console_scripts','slugify'
-__requires__ = 'python-slugify==1.2.0'
-import sys
-from pkg_resources import load_entry_point
+#!/home/avinash/Documents/InfoGami/env/bin/python2.7
+# -*- coding: utf-8 -*-
 
-if __name__ == '__main__':
-    sys.exit(
-        load_entry_point('python-slugify==1.2.0', 'console_scripts', 'slugify')()
-    )
+USAGE = """Usage: echo "Héllo Wörld" | slugify # => hello-world"""
+
+import sys
+import slugify
+
+if sys.argv[1:]:
+    print >>sys.stderr, USAGE
+    sys.exit(1)
+
+line = sys.stdin.readline()
+while line:
+    print slugify.slugify(line.decode('utf-8'))
+    line = sys.stdin.readline()

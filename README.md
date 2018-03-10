@@ -40,3 +40,30 @@ Things to do :
   Think !
 
 
+## Getting Started
+### Prerequisites
+    - python2.7
+    - virtualenv
+### installing Prerequisites
+```
+$ sudo apt-get install virtualenvwrapper
+```
+### Creating Virtual Enviornment
+    * move to the project directory *
+
+```
+$ virtualenv -p /usr/bin/python2.7 env
+$ source env/bin/activate
+$ cd projdir
+```
+### installing project requirement
+```
+$ pip install -r requirement.txt
+```
+### Running Project
+```
+$ python manage.py migrate
+$ python manage.py runserver
+```
+
+
